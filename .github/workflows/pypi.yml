@@ -11,7 +11,8 @@ jobs:
     environment:
       name: testpypi
       url: https://test.pypi.org/p/TestCompositeWorkflow
-
+    permissions:
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
