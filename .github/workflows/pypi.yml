@@ -15,4 +15,4 @@ jobs:
       - name: Update Python package version
         uses: platomo/publish-pypi-action@6373993be395d354e9f902e38d284193aaa5867d
         with:
-          repository-url: "https://github.com/StevenSchlechte/TestCompositeWorkflow"
+          repository-url: https://test.pypi.org/TestCompositeAction/
