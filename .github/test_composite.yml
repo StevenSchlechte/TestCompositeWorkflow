@@ -15,5 +15,5 @@ jobs:
       - name: Update Python package version
         uses: platomo/update-version-py-action
         with:
-          version: "1.0.0"
+          version: "1.0.0.0"
           file-path: "my_package"
