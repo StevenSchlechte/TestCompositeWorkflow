@@ -1,0 +1,18 @@
+name: Update Package Version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update Python package version
+        uses: platomo/publish-pypi-action@6373993be395d354e9f902e38d284193aaa5867d
+        with:
+          repository-url: "https://github.com/StevenSchlechte/TestCompositeWorkflow"
