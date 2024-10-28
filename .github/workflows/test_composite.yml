@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Update Python package version
-        uses: platomo/update-version-py-action@2122a0dacba5f124fcdc873ddb9eb4209d2e94b4
+        uses: platomo/update-version-py-action@795e1b796e60dd077e8b8d83f6a8dfbc82277e84
         with:
           version: "1.0.0.0"
           file-path: "my_package"
