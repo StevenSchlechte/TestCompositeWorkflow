@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "spam-eggs"
+name = "TestCompositeAction"
 version = "2020.0.0"
 dependencies = [
   "httpx",
@@ -22,8 +22,7 @@ maintainers = [
   {name = "Brett Cannon", email = "brett@example.com"}
 ]
 description = "Lovely Spam! Wonderful Spam!"
-readme = "README.rst"
-license = {file = "LICENSE.txt"}
+readme = "README.md"
 keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
 classifiers = [
   "Development Status :: 4 - Beta",
