@@ -1,0 +1,50 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+      - id: check-json
+      - id: end-of-file-fixer
+        exclude_types:
+          - json
+      - id: trailing-whitespace
+      - id: no-commit-to-branch
+      - id: debug-statements
+      - id: requirements-txt-fixer
+      - id: check-executables-have-shebangs
+      - id: detect-private-key
+  - repo: local
+    hooks:
+      - id: update-type-stubs
+        name: Check for Type Stubs and Update Config
+        entry: ./update_precommit.py
+        language: system
+        files: ^requirements.*\.txt$
+        stages:
+          - commit
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args:
+          - --profile
+          - black
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        args:
+          - -c=./.yamllint.yaml
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.10.0
+    hooks:
+      - id: shellcheck
