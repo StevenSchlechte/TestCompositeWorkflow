@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run Python Tests
-        uses: platomo/publish-pypi-action@6373993be395d354e9f902e38d284193aaa5867d
+        uses: platomo/test-python-app-action@b681fb1d4e41672025bc390245de9263df0c04f1
         with:
           os: linux-latest
           py-version: 3.11
