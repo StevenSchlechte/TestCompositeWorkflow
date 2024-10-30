@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Run Python Tests
-        uses: platomo/test-python-app-action@1a65aeb5c6d9547fdd2fa035e45854696980f592
+        uses: platomo/test-python-app-action@fbadae82a79c3ff71c6fe854031259b874e04a3c
         with:
           os: linux-latest
           py-version: 3.11
