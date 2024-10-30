@@ -1,0 +1,19 @@
+name: Update Package Version
+on:
+  push:
+    branches:
+      - main
+jobs:
+
+
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Run Python Tests
+        uses: platomo/publish-pypi-action@6373993be395d354e9f902e38d284193aaa5867d
+        with:
+          os: linux-latest
+          py-version: 3.11
+          test_path: ./test
